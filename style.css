@@ -1,6 +1,9 @@
 @import "components/header.css";
 @import "components/container.css";
 @import "components/button.css";
+@import "components/card.css";
+@import "components/analyze-block.css";
+@import "components/checkbox.css";
 
 @font-face {
     font-family: 'OnestRegular';
@@ -36,6 +39,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
@@ -57,4 +61,13 @@ a:active {
 
 ul[class] {
     list-style: none;
+}
+
+/*======analyze=========*/
+.analyze {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
 }

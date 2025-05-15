@@ -1,0 +1,55 @@
+.card-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+    position: relative;
+    cursor: pointer;
+}
+
+.card-checkbox {
+    opacity: 0;
+    position: absolute;
+    width: 0;
+    height: 0;
+}
+
+.checkbox-text {
+    align-self: flex-end;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 70%;
+    letter-spacing: -0.01em;
+    color: #000;
+}
+
+.checkbox-mark {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 44px;
+    border: 2px solid #ccc;
+    background: white;
+    transition: background 0.2s ease, border 0.2s ease;
+}
+
+.checkbox-mark::after {
+    content: "";
+    position: absolute;
+    display: none;
+    left: 10px;
+    top: 4px;
+    width: 4px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.card-label .card-checkbox:checked + .checkbox-mark {
+    background: #335cff;
+    border-color: #335cff;
+}
+
+.card-label .card-checkbox:checked + .checkbox-mark::after {
+    display: block;
+}
