@@ -1,4 +1,5 @@
 const links = document.querySelectorAll('.header-nav_item a');
+let crumbsSubtitle = document.querySelector('.crumbs-subtitle');
 
 links.forEach(link => {
     link.addEventListener('click', function () {
@@ -24,6 +25,7 @@ document.querySelectorAll('.card').forEach(card => {
 
             // Добавляем активный класс выбранному элементу
             item.classList.add('active');
+            crumbsSubtitle.textContent = tabItems[index].textContent;
             tabDescriptions[index].classList.add('active');
         });
     });
@@ -32,6 +34,7 @@ document.querySelectorAll('.card').forEach(card => {
 // checkbox
 
 document.querySelectorAll('.card-checkbox').forEach((checkbox) => {
+    console.log(checkbox)
     checkbox.addEventListener('change', (e) => {
         if (checkbox.checked) {
             document.querySelectorAll('.card-checkbox').forEach(cb => {
@@ -39,4 +42,26 @@ document.querySelectorAll('.card-checkbox').forEach((checkbox) => {
             });
         }
     });
+});
+
+const checkboxes = document.querySelectorAll('.card-checkbox');
+const crumbsTitle = document.querySelector('.crumbs-title');
+
+checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener('change', () => {
+        checkboxes.forEach(cb => {
+            if (cb !== checkbox) cb.checked = false;
+        });
+
+        if (checkbox.checked) {
+            crumbsTitle.textContent = checkbox.closest('.card-label').querySelector('.checkbox-text').textContent;
+        } else {
+            crumbsTitle.textContent = '';
+            crumbsSubtitle.textContent = '';
+        }
+    });
+
+    if (checkbox.checked) {
+        crumbsTitle.textContent = checkbox.closest('.card-label').querySelector('.checkbox-text').textContent;
+    }
 });

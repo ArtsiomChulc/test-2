@@ -1,0 +1,27 @@
+.search {
+
+    .crumbs {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: -0.01em;
+        text-align: center;
+        color: #82808e;
+
+        .crumbs-title {
+
+        }
+
+        .dot {
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background: #82808e;
+        }
+    }
+}
