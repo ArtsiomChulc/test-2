@@ -5,5 +5,9 @@
     background: #fff;
     display: flex;
     flex-direction: column;
-    flex: 0 1 50%;
+    flex: 1 1 592px;
+
+    &:has(.card-checkbox:checked) {
+        border: 2px solid #335cff;
+    }
 }

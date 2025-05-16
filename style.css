@@ -4,6 +4,7 @@
 @import "components/card.css";
 @import "components/analyze-block.css";
 @import "components/checkbox.css";
+@import "components/tabs.css";
 
 @font-face {
     font-family: 'OnestRegular';
@@ -70,4 +71,13 @@ ul[class] {
     justify-content: space-between;
     gap: 16px;
     width: 100%;
+    flex-wrap: wrap;
+}
+
+hr {
+    width: 100%;
+    height: 1px;
+    background: #e3e6e8;
+    margin-top: 56px;
+    margin-bottom: 24px;
 }

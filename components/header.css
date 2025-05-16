@@ -3,7 +3,9 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    padding-block: 10px;
     gap: 48px;
+    margin-bottom: 56px;
 
     .header-logo {
         font-weight: 700;
